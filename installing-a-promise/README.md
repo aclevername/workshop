@@ -26,15 +26,41 @@ Now that you know more about Kratix Promises, follow the steps below to install 
 <hr>
 
 ## <a name="prerequisites"></a>Prerequisites
-You need a fresh installation of Kratix for this section. The simplest way to do so is by running the quick-start script from within the Kratix directory.
 
-You can run this command from the root of `kratix`:
+You need a fresh installation of Kratix for this section. If you are coming
+from Part 1 of this series, go directly to the next section. Otherwise, expand
+below for instructions:
 
-```bash
-./scripts/quick-start.sh --recreate
-```
+<details>
+  <summary>Clusters running locally with KinD</summary>
+  <br/> 
+  The simplest way to do so is by running the quick-start script from within the
+  Kratix directory.
 
-Alternatively, you can go back to [Install Kratix across two KinD clusters](/installing-kratix/).
+  You can run this command from the root of `kratix`:
+
+  ```bash
+  ./scripts/quick-start.sh --recreate
+  ```
+
+  Alternatively, you can go back to [Install Kratix across two KinD clusters](/installing-kratix/).
+</details>
+
+<details>
+  <summary>Clusters running on public clouds</summary>
+  <br/>
+  In this repository, there's a script to remove all the resources Kratix has
+  created as part of this workshop. You can either clone this repository and
+  execute it directly, or run the command below. Make sure to replace the
+  placeholder context names with the proper names: <br/><br/>
+
+  ```bash
+  export PLATFORM_CONTEXT="<your platform cluster context>"
+  export WORKER_CONTEXT="<your worker cluster context>"
+  curl -sL https://raw.githubusercontent.com/syntasso/workshop/main/scripts/reset-cluster.sh | bash
+  ```
+</details>
+
 <br />
 <br />
 
